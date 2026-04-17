@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeGive - Premium Preview</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">🎁 Free<span>Give</span></a>
+            <div class="nav-links">
+                <a href="#">Browse</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#" class="btn-nav">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content" data-reveal>
+                <span class="section-tag">Community Driven</span>
+                <h1>Give Freely,<br><span>Receive Gratefully</span></h1>
+                <p>Join a modern community sharing platform where neighbors give items a second life. Sustainable, simple, and completely free.</p>
+                <div class="hero-btns">
+                    <a href="#" class="btn btn-primary">Start Sharing</a>
+                    <a href="#" class="btn btn-outline">Browse Gallery</a>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <h4>1.2k+</h4>
+                        <p>Items Given</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>450+</h4>
+                        <p>Active Donors</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image-container" data-reveal>
+                <!-- Using a placeholder as the local copy was denied, but this represents the high-end feel -->
+                <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&q=80&w=1000" alt="Sharing Items" class="hero-image">
+                <div class="floating-card">
+                    <div class="feature-icon" style="font-size: 1.5rem; margin-bottom: 0.5rem;">✨</div>
+                    <p style="font-weight: 700; color: var(--dark); margin:0;">New Item Posted!</p>
+                    <p style="font-size: 0.8rem; margin:0;">Vintage Camera available in London</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <span class="section-tag">How It Works</span>
+            <h2>Sharing has never been easier</h2>
+            <div class="features-grid">
+                <div class="feature-card" data-reveal>
+                    <div class="feature-icon">🌿</div>
+                    <h3>List Items</h3>
+                    <p>Snap a photo and list items you no longer need in seconds. Give them a new purpose.</p>
+                </div>
+                <div class="feature-card" data-reveal>
+                    <div class="feature-icon">📱</div>
+                    <h3>Claim & Connect</h3>
+                    <p>Browse local treasures. When you find something you need, claim it and chat with the donor.</p>
+                </div>
+                <div class="feature-card" data-reveal>
+                    <div class="feature-icon">🏠</div>
+                    <h3>Pick Up</h3>
+                    <p>Arrange a safe meeting point or porch pickup. Experience the joy of community giving.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Simple reveal animation
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+
+        // Navbar effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
