@@ -1,0 +1,17 @@
+target/
+*.class
+*.war
+*.ear
+*.jar
+.idea/
+*.iml
+.project/
+.classpath/
+.settings/
+.vscode/
+.DS_Store
+*.log
+__MACOSX/
+.env
+.dockerignore
+node_modules/
