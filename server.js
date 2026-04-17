@@ -39,6 +39,14 @@ app.get('/dashboard', (req, res) => {
     res.sendFile(path.join(__dirname, 'mocks/dashboard.html'));
 });
 
+app.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname, 'mocks/about.html'));
+});
+
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname, 'mocks/about.html')); // Using About for Contact simulation
+});
+
 // Mock API endpoint for items
 app.get('/api/items', (req, res) => {
     res.json(mockItems);
